@@ -6,14 +6,14 @@ export default function Footer() {
   return (
     <footer className="border-t border-slate-800/50 bg-slate-950 text-slate-400">
       <div className="mx-auto max-w-6xl px-4 py-12">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
-          <div>
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
+          <div className="md:col-span-1">
             <h3 className="mb-3 text-lg font-semibold text-white">
               {COMPANY.name}
             </h3>
             <p className="text-sm leading-relaxed">
-              {COMPANY.description}. Sitios web y sistemas que ayudan a tu
-              empresa a conseguir más clientes.
+              {COMPANY.description}. Tecnología que impulsa y protege tu
+              negocio.
             </p>
           </div>
 
@@ -32,7 +32,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#servicios"
+                  href="#sistemas-web"
                   className="transition-colors hover:text-white"
                 >
                   Servicios
@@ -40,10 +40,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#proceso"
+                  href="#soporte"
                   className="transition-colors hover:text-white"
                 >
-                  Proceso
+                  Soporte
                 </a>
               </li>
               <li>
@@ -52,6 +52,54 @@ export default function Footer() {
                   className="transition-colors hover:text-white"
                 >
                   Contacto
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
+              Servicios
+            </h4>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a
+                  href="#sistemas-web"
+                  className="transition-colors hover:text-white"
+                >
+                  Sistemas Web Empresariales
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#desarrollo-web"
+                  className="transition-colors hover:text-white"
+                >
+                  Desarrollo Web
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#soporte"
+                  className="transition-colors hover:text-white"
+                >
+                  Soporte Técnico
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#camaras"
+                  className="transition-colors hover:text-white"
+                >
+                  Cámaras de Seguridad
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#gps"
+                  className="transition-colors hover:text-white"
+                >
+                  GPS para Flotas
                 </a>
               </li>
             </ul>
@@ -81,7 +129,7 @@ export default function Footer() {
           <p>
             © {year} {COMPANY.name}. Todos los derechos reservados.
           </p>
-          <p>Diseñado para convertir visitantes en clientes.</p>
+          <p>Soluciones tecnológicas integrales en Chile.</p>
         </div>
       </div>
     </footer>

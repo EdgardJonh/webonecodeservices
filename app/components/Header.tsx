@@ -9,8 +9,9 @@ export default function Header() {
 
   const navLinks = [
     { href: "#inicio", label: "Inicio" },
-    { href: "#servicios", label: "Servicios" },
-    { href: "#proceso", label: "Proceso" },
+    { href: "#sistemas-web", label: "Servicios" },
+    { href: "#soporte", label: "Soporte" },
+    { href: "#camaras", label: "Seguridad" },
     { href: "#contacto", label: "Contacto" },
   ];
 

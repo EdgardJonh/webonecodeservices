@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "OneCodeServices — Tu Web, Tu Mejor Vendedor",
+  title: "OneCodeServices — Tecnología que impulsa y protege tu negocio",
   description:
-    "Diseñamos sitios web estratégicos que atraen clientes, generan confianza y multiplican tus ventas. Desarrollo web profesional en Chile.",
+    "Desarrollo web en Chile, sistemas web empresariales, instalación de cámaras de seguridad, soporte técnico y GPS para flotas. Soluciones tecnológicas integrales.",
 };
 
 export default function RootLayout({

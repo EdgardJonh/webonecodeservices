@@ -15,7 +15,7 @@ export default function Header() {
     { href: "#contacto", label: "Contacto" },
   ];
 
-  const whatsappUrl = `https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent(WHATSAPP_MESSAGES.diagnostico)}`;
+  const whatsappUrl = `https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent(WHATSAPP_MESSAGES.consultoria)}`;
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/5 bg-slate-950/95 text-white backdrop-blur-md">

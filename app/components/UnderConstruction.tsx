@@ -1,21 +1,21 @@
 export default function UnderConstruction() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-blue-50 via-white to-gray-50 dark:from-gray-900 dark:via-black dark:to-gray-900">
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-brand-gray/10 via-white to-gray-50 dark:from-brand-darker dark:via-black dark:to-brand-darker">
       <div className="container mx-auto px-4 py-16 text-center">
         <div className="max-w-2xl mx-auto">
           {/* Logo o nombre de la empresa */}
           <div className="mb-8">
-            <h1 className="text-5xl md:text-6xl font-bold text-blue-600 dark:text-blue-500 mb-4">
+            <h1 className="text-5xl md:text-6xl font-bold text-brand-orange dark:text-brand-orange mb-4">
               OneCodeServices
             </h1>
-            <div className="w-24 h-1 bg-blue-600 mx-auto dark:bg-blue-500"></div>
+            <div className="w-24 h-1 bg-brand-orange mx-auto dark:bg-brand-orange"></div>
           </div>
 
           {/* Icono de construcción */}
           <div className="mb-8">
-            <div className="inline-flex items-center justify-center w-32 h-32 rounded-full bg-blue-100 dark:bg-blue-900/30 mb-6">
+            <div className="inline-flex items-center justify-center w-32 h-32 rounded-full bg-brand-orange/10 dark:bg-brand-orange/20 mb-6">
               <svg
-                className="w-16 h-16 text-blue-600 dark:text-blue-400"
+                className="w-16 h-16 text-brand-orange dark:text-brand-orange"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -48,11 +48,11 @@ export default function UnderConstruction() {
           </p>
           <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
             Pronto estaremos listos para ofrecerte nuestros servicios de
-            <span className="font-semibold text-blue-600 dark:text-blue-400">
+            <span className="font-semibold text-brand-orange dark:text-brand-orange">
               {" "}creación de sistemas{" "}
             </span>
             y
-            <span className="font-semibold text-blue-600 dark:text-blue-400">
+            <span className="font-semibold text-brand-orange dark:text-brand-orange">
               {" "}desarrollo de páginas web{" "}
             </span>
             para empresas.
@@ -72,9 +72,9 @@ export default function UnderConstruction() {
 
           {/* Decoración */}
           <div className="mt-12 flex justify-center space-x-2">
-            <div className="w-3 h-3 bg-blue-600 rounded-full animate-pulse"></div>
+            <div className="w-3 h-3 bg-brand-orange rounded-full animate-pulse"></div>
             <div className="w-3 h-3 bg-gray-400 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-            <div className="w-3 h-3 bg-blue-600 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+            <div className="w-3 h-3 bg-brand-orange rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
           </div>
         </div>
       </div>

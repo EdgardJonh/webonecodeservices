@@ -1,5 +1,7 @@
 import WhatsAppButton from "./components/WhatsAppButton";
-import HeroBackground from "./components/HeroBackground";
+import TrustBar from "./components/TrustBar";
+import Hero from "./components/Hero";
+import SistemasWebEmpresariales from "./components/SistemasWebEmpresariales";
 import { COMPANY, WHATSAPP_MESSAGES } from "./config/constants";
 
 function waUrl(msg: string) {
@@ -276,156 +278,12 @@ export default function Home() {
   return (
     <>
       {/* ═══════════════════ HERO ═══════════════════ */}
-      <section
-        id="inicio"
-        className="relative overflow-hidden bg-slate-950 text-white"
-      >
-        <HeroBackground />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--tw-gradient-stops))] from-brand-orange/10 via-transparent to-transparent" />
-
-        <div className="relative mx-auto max-w-6xl px-4 py-24 md:py-32 lg:py-40">
-          <div className="max-w-3xl">
-            <p className="mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-brand-orange">
-              Soluciones tecnológicas en Chile
-            </p>
-
-            <h1 className="mb-6 text-4xl font-bold leading-[1.1] tracking-tight md:text-5xl lg:text-6xl">
-              Tecnología que impulsa y
-              <span className="text-brand-orange"> protege tu negocio.</span>
-            </h1>
-
-            <p className="mb-10 max-w-2xl text-lg leading-relaxed text-slate-300 md:text-xl">
-              Desarrollamos sistemas web, soluciones digitales, soporte
-              tecnológico y sistemas de seguridad para empresas y hogares en
-              crecimiento.
-            </p>
-
-            <div className="mb-12 flex flex-col gap-4 sm:flex-row">
-              <a
-                href={waUrl(WHATSAPP_MESSAGES.consultoria)}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-orange px-8 py-4 text-base font-semibold text-white shadow-lg shadow-brand-orange/20 transition-colors hover:bg-brand-orange/90"
-              >
-                <svg
-                  className="h-5 w-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
-                Agenda una consultoría gratuita
-              </a>
-              <WhatsAppButton
-                className="rounded-xl px-8 py-4 text-base"
-                message={WHATSAPP_MESSAGES.default}
-              >
-                Hablar por WhatsApp
-              </WhatsAppButton>
-            </div>
-
-            <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-400">
-              {[
-                "+50 proyectos entregados",
-                "Empresa chilena",
-                "Garantía de satisfacción",
-              ].map((item) => (
-                <span key={item} className="flex items-center gap-2">
-                  <svg
-                    className="h-4 w-4 text-emerald-400"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M5 13l4 4L19 7"
-                    />
-                  </svg>
-                  {item}
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <Hero />
       {/* ═══════════════════ TRUST BAR ═══════════════════ */}
-      <section className="border-b border-slate-100 bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-12">
-          <div className="grid grid-cols-2 gap-8 text-center md:grid-cols-4">
-            {stats.map((stat, i) => (
-              <div key={i}>
-                <p className="text-3xl font-bold text-slate-900 md:text-4xl">
-                  {stat.value}
-                </p>
-                <p className="mt-1 text-sm text-slate-500">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TrustBar stats={stats} />
 
       {/* ═══════════════════ SISTEMAS WEB EMPRESARIALES ═══════════════════ */}
-      <section id="sistemas-web" className="bg-slate-50 py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="mb-16 text-center">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-brand-orange">
-              Sistemas a medida
-            </p>
-            <h2 className="mx-auto max-w-3xl text-3xl font-bold leading-tight text-slate-900 md:text-4xl">
-              Sistemas Web a Medida para Empresas
-            </h2>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-500">
-              Desarrollamos sistemas personalizados que permiten aumentar ventas,
-              optimizar procesos y tener control total del negocio.
-            </p>
-          </div>
-
-          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {sistemasWebBeneficios.map((item, i) => (
-              <div
-                key={i}
-                className="rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:shadow-lg"
-              >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-orange/10">
-                  <svg
-                    className="h-6 w-6 text-brand-orange"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    {item.icon}
-                  </svg>
-                </div>
-                <h3 className="mb-2 font-semibold text-slate-900">
-                  {item.title}
-                </h3>
-                <p className="text-sm leading-relaxed text-slate-500">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <WhatsAppButton
-              message={WHATSAPP_MESSAGES.sistemas_web}
-              className="rounded-xl px-8 py-4 text-base"
-            >
-              Solicitar diagnóstico gratuito
-            </WhatsAppButton>
-          </div>
-        </div>
-      </section>
+      <SistemasWebEmpresariales sistemasWebBeneficios={sistemasWebBeneficios} />
 
       {/* ═══════════════════ DESARROLLO WEB PROFESIONAL ═══════════════════ */}
       <section id="desarrollo-web" className="bg-white py-20 md:py-28">

@@ -39,22 +39,22 @@ const slides: Slide[] = [
       "Servicio técnico especializado para empresas y particulares. Limpieza, reparación, armado de equipos y optimización de rendimiento.",
     image: "/images/hero/tecnico.png",
   },
-  {
-    id: "seguridad",
-    title: "Seguridad\ny Cámaras",
-    subtitle: "Videovigilancia inteligente",
-    description:
-      "Instalamos cámaras de seguridad con monitoreo en tiempo real y acceso remoto. Soluciones para hogares, empresas y sectores rurales.",
-    image: "/images/hero/camara.png",
-  },
-  {
-    id: "gps",
-    title: "GPS para\nFlotas",
-    subtitle: "Próximamente",
-    description:
-      "Sistema de seguimiento GPS en tiempo real para empresas de transporte. Control de rutas, conductores y optimización operativa.",
-    image: "/images/hero/gps.png",
-  },
+  // {
+  //   id: "seguridad",
+  //   title: "Seguridad\ny Cámaras",
+  //   subtitle: "Videovigilancia inteligente",
+  //   description:
+  //     "Instalamos cámaras de seguridad con monitoreo en tiempo real y acceso remoto. Soluciones para hogares, empresas y sectores rurales.",
+  //   image: "/images/hero/camara.png",
+  // },
+  // {
+  //   id: "gps",
+  //   title: "GPS para\nFlotas",
+  //   subtitle: "Próximamente",
+  //   description:
+  //     "Sistema de seguimiento GPS en tiempo real para empresas de transporte. Control de rutas, conductores y optimización operativa.",
+  //   image: "/images/hero/gps.png",
+  // },
 ];
 
 function waUrl(msg: string) {
@@ -202,42 +202,61 @@ export default function Hero() {
                     <button
                       key={slide.id}
                       onClick={() => goTo(i)}
-                      className={`group relative flex w-40 shrink-0 flex-col rounded-xl border p-4 text-left transition-all duration-300 md:w-48 lg:w-52 ${
+                      className={`group relative flex w-40 shrink-0 flex-col overflow-hidden rounded-xl border text-left transition-all duration-300 md:w-48 lg:w-56 ${
                         isActive
                           ? "border-blue-500/40 bg-white/10 shadow-[0_0_24px_rgba(59,130,246,0.2)] backdrop-blur-lg"
                           : "border-white/6 bg-white/3 backdrop-blur-sm hover:border-white/10 hover:bg-white/6"
                       }`}
                     >
-                      {/* Progress bar for active card */}
                       {isActive && (
                         <motion.div
                           layoutId="activeCardIndicator"
-                          className="absolute -top-px left-4 right-4 h-[2px] rounded-full bg-blue-500"
+                          className="absolute -top-px left-4 right-4 h-[2px] rounded-full bg-blue-500 z-10"
                           transition={{ type: "spring", stiffness: 400, damping: 30 }}
                         />
                       )}
 
-                      <span
-                        className={`mb-2 text-[10px] font-semibold uppercase tracking-widest ${
-                          isActive ? "text-blue-400" : "text-slate-500"
-                        }`}
-                      >
-                        {padNum(i + 1)}
-                      </span>
-                      <span
-                        className={`mb-1 text-sm font-semibold leading-tight ${
-                          isActive ? "text-white" : "text-slate-300 group-hover:text-white"
-                        }`}
-                      >
-                        {slide.title.replace("\n", " ")}
-                      </span>
-                      <span
-                        className={`text-xs leading-snug ${
-                          isActive ? "text-slate-300" : "text-slate-500"
-                        }`}
-                      >
-                        {slide.subtitle}
-                      </span>
+                      <div className="relative h-20 w-full overflow-hidden md:h-24">
+                        {!imageErrors.has(slide.id) ? (
+                          <Image
+                            src={slide.image}
+                            alt={slide.title.replace("\n", " ")}
+                            fill
+                            className={`object-cover transition-all duration-500 ${
+                              isActive
+                                ? "scale-105 brightness-90"
+                                : "scale-100 brightness-50 group-hover:brightness-75 group-hover:scale-105"
+                            }`}
+                            sizes="(max-width: 768px) 160px, 224px"
+                            onError={() => handleImageError(slide.id)}
+                          />
+                        ) : null}
+                        <div className="absolute inset-0 bg-linear-to-t from-black/70 to-transparent" />
+                        <span
+                          className={`absolute bottom-2 left-3 text-[10px] font-semibold uppercase tracking-widest ${
+                            isActive ? "text-blue-400" : "text-slate-400"
+                          }`}
+                        >
+                          {padNum(i + 1)}
+                        </span>
+                      </div>
+
+                      <div className="p-3 pt-2">
+                        <span
+                          className={`mb-1 block text-sm font-semibold leading-tight ${
+                            isActive ? "text-white" : "text-slate-300 group-hover:text-white"
+                          }`}
+                        >
+                          {slide.title.replace("\n", " ")}
+                        </span>
+                        <span
+                          className={`text-xs leading-snug ${
+                            isActive ? "text-slate-300" : "text-slate-500"
+                          }`}
+                        >
+                          {slide.subtitle}
+                        </span>
+                      </div>
                     </button>
                   );
                 })}

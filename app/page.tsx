@@ -1,6 +1,7 @@
 import WhatsAppButton from "./components/WhatsAppButton";
 import TrustBar from "./components/TrustBar";
 import Hero from "./components/Hero";
+import WebProfecionalSection from "./components/webProfecionalSection";
 import SistemasWebEmpresariales from "./components/SistemasWebEmpresariales";
 import { COMPANY, WHATSAPP_MESSAGES } from "./config/constants";
 
@@ -10,13 +11,12 @@ function waUrl(msg: string) {
 
 export default function Home() {
   const stats = [
-    { value: "+50", label: "Proyectos entregados" },
+    { value: "+15", label: "Proyectos entregados" },
     { value: "98%", label: "Clientes satisfechos" },
     { value: "4", label: "Líneas de servicio" },
     { value: "24/7", label: "Soporte disponible" },
   ];
-
-  const sistemasWebBeneficios = [
+const sistemasWebBeneficios = [
     {
       title: "Gestión de clientes",
       desc: "Centraliza la información de tus clientes y mejora el seguimiento comercial.",
@@ -79,6 +79,7 @@ export default function Home() {
     },
   ];
 
+ 
   const desarrolloWebBeneficios = [
     {
       title: "Diseño profesional y moderno",
@@ -286,58 +287,7 @@ export default function Home() {
       <SistemasWebEmpresariales sistemasWebBeneficios={sistemasWebBeneficios} />
 
       {/* ═══════════════════ DESARROLLO WEB PROFESIONAL ═══════════════════ */}
-      <section id="desarrollo-web" className="bg-white py-20 md:py-28">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="mb-16 text-center">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-brand-orange">
-              Desarrollo web
-            </p>
-            <h2 className="mx-auto max-w-3xl text-3xl font-bold leading-tight text-slate-900 md:text-4xl">
-              Sitios Web Estratégicos que Generan Clientes
-            </h2>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-500">
-              Diseñamos sitios web modernos, rápidos y optimizados para
-              buscadores. Creamos experiencias digitales enfocadas en conversión
-              y posicionamiento en Google.
-            </p>
-          </div>
-
-          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {desarrolloWebBeneficios.map((item, i) => (
-              <div
-                key={i}
-                className="rounded-2xl border border-slate-100 bg-slate-50 p-6 text-center transition-all duration-300 hover:shadow-lg"
-              >
-                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-brand-orange/10">
-                  <svg
-                    className="h-6 w-6 text-brand-orange"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    {item.icon}
-                  </svg>
-                </div>
-                <h3 className="mb-2 font-semibold text-slate-900">
-                  {item.title}
-                </h3>
-                <p className="text-sm leading-relaxed text-slate-500">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <WhatsAppButton
-              message={WHATSAPP_MESSAGES.desarrollo_web}
-              className="rounded-xl px-8 py-4 text-base"
-            >
-              Quiero mi sitio profesional
-            </WhatsAppButton>
-          </div>
-        </div>
-      </section>
+      <WebProfecionalSection />
 
       {/* ═══════════════════ SOPORTE Y MANTENCIÓN TECNOLÓGICA ═══════════════════ */}
       <section id="soporte" className="bg-slate-50 py-20 md:py-28">
@@ -395,7 +345,7 @@ export default function Home() {
       </section>
 
       {/* ═══════════════════ CÁMARAS DE SEGURIDAD ═══════════════════ */}
-      <section id="camaras" className="bg-white py-20 md:py-28">
+      {/* <section id="camaras" className="bg-white py-20 md:py-28">
         <div className="mx-auto max-w-6xl px-4">
           <div className="mb-16 text-center">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-brand-orange">
@@ -445,10 +395,10 @@ export default function Home() {
             </WhatsAppButton>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ═══════════════════ PRÓXIMAMENTE: GPS ═══════════════════ */}
-      <section id="gps" className="bg-slate-950 py-20 text-white md:py-28">
+      {/* <section id="gps" className="bg-slate-950 py-20 text-white md:py-28">
         <div className="mx-auto max-w-6xl px-4">
           <div className="mb-16 text-center">
             <span className="mb-6 inline-block rounded-full border border-brand-orange/30 bg-brand-orange/10 px-5 py-1.5 text-xs font-semibold uppercase tracking-widest text-brand-orange">
@@ -512,7 +462,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ═══════════════════ CTA FINAL ═══════════════════ */}
       <section id="contacto" className="bg-slate-950 py-20 text-white md:py-28">

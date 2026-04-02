@@ -4,7 +4,7 @@ import { WHATSAPP_MESSAGES } from "../config/constants";
 export const metadata = {
   title: "Servicios - OneCodeServices",
   description:
-    "Sistemas web empresariales, desarrollo web profesional, soporte técnico, cámaras de seguridad y GPS para flotas. Soluciones tecnológicas integrales en Chile.",
+    "Sistemas web empresariales, desarrollo web profesional y soporte técnico. Soluciones tecnológicas integrales en Chile.",
 };
 
 const servicios = [
@@ -50,19 +50,19 @@ const servicios = [
     cta: "Consultar por soporte técnico",
     anchor: "soporte",
   },
-  {
-    title: "Cámaras de Seguridad",
-    desc: "Instalamos cámaras de seguridad con monitoreo en tiempo real y soluciones adaptadas a hogares y sectores rurales.",
-    features: [
-      "Instalación profesional",
-      "Acceso remoto desde celular",
-      "Grabación continua",
-      "Mayor protección y tranquilidad",
-    ],
-    message: WHATSAPP_MESSAGES.camaras,
-    cta: "Cotizar instalación",
-    anchor: "camaras",
-  },
+  // {
+  //   title: "Cámaras de Seguridad",
+  //   desc: "Instalamos cámaras de seguridad con monitoreo en tiempo real y soluciones adaptadas a hogares y sectores rurales.",
+  //   features: [
+  //     "Instalación profesional",
+  //     "Acceso remoto desde celular",
+  //     "Grabación continua",
+  //     "Mayor protección y tranquilidad",
+  //   ],
+  //   message: WHATSAPP_MESSAGES.camaras,
+  //   cta: "Cotizar instalación",
+  //   anchor: "camaras",
+  // },
 ];
 
 export default function Servicios() {
@@ -77,8 +77,8 @@ export default function Servicios() {
             Soluciones tecnológicas para tu negocio
           </h1>
           <p className="mx-auto max-w-2xl text-lg text-slate-500">
-            Desde sistemas web empresariales hasta seguridad física. Todo lo que
-            tu empresa necesita para crecer y protegerse.
+            Desde sistemas web empresariales hasta soporte técnico. Todo lo que
+            tu empresa necesita para crecer.
           </p>
         </div>
 

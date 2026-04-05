@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { COMPANY, WHATSAPP_MESSAGES } from "../config/constants";
 
@@ -21,11 +22,20 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-white/5 bg-slate-950/95 text-white backdrop-blur-md">
       <nav className="mx-auto max-w-6xl px-4 py-3.5">
         <div className="flex items-center justify-between">
-          <Link
-            href="/"
-            className="text-xl font-bold tracking-tight text-white"
-          >
-            {COMPANY.name}
+          <Link href="/" className="group flex items-center gap-3">
+            <div className="h-16 w-16 shrink-0 overflow-hidden rounded-full bg-white shadow-md">
+              <Image
+                src="/images/logo/Logo elegante de OneCode.png"
+                alt={COMPANY.name}
+                width={64}
+                height={64}
+                className="h-full w-full scale-110 object-contain transition-transform duration-300 ease-in-out group-hover:scale-[1.35]"
+                priority
+              />
+            </div>
+            <span className="text-xl font-bold tracking-tight text-white">
+              OneCode <span className="text-teal-400">Services</span>
+            </span>
           </Link>
 
           <div className="hidden items-center gap-8 md:flex">
